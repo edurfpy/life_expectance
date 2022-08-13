@@ -1,0 +1,33 @@
+2021-12-31 13:23:58,142 - INFO - load_data.py - 132 - etl_data: ============== INICIO ETL_DATA ==============
+2021-12-31 13:23:58,142 - INFO - load_data.py - 135 - etl_data: Recuperando datos de ORIGEN
+2021-12-31 13:23:58,164 - INFO - load_data.py - 137 - etl_data: Carga datos ORIGEN completada
+2021-12-31 13:23:58,164 - INFO - load_data.py - 139 - etl_data: INICIO formato de columnas y limpieza básica
+2021-12-31 13:23:58,177 - DEBUG - first_clean.py - 90 - first_clean: FIRST CLEAN, registros duplicados: 0
+2021-12-31 13:23:58,181 - DEBUG - first_clean.py - 94 - first_clean: FIRST CLEAN, nulos en el TARGET: 10
+2021-12-31 13:23:58,187 - DEBUG - first_clean.py - 41 - del_var_zero: VARIANZA CERCANA A CERO, umbral (0.5)
+columnas a estudiar: ['Population', 'pct_total_exp', 'pct_exp_GDP', 'GDP', 'Hepatitis_B', 'Measles', 'Polio', 'Diphtheria', 'HIV_AIDS', 'BMI', 'Alcohol', 'thinness_5_9_years', 'thinness__1_19_years', 'Schooling', 'under_five_deaths', 'infant_deaths', 'Adult_Mortality', 'Life_expectancy']
+2021-12-31 13:23:58,190 - DEBUG - first_clean.py - 59 - del_var_zero: FIN VARIANZA CERCANA A CERO, columnas eliminadas: []
+2021-12-31 13:23:58,191 - DEBUG - first_clean.py - 103 - first_clean: FIRST CLEAN nº registros con excesivos nulos (max. establecido 5 nulos):37 registros
+2021-12-31 13:23:58,191 - INFO - load_data.py - 149 - etl_data: FIN formato de columnas y limpieza básica
+2021-12-31 13:23:58,192 - INFO - load_data.py - 154 - etl_data: EDA: columnas eliminadas (correladas, nº elevado valores erróneos o nulos, etc.):
+2021-12-31 13:23:58,192 - INFO - load_data.py - 155 - etl_data: ['Population', 'Schooling', 'under_five_deaths', 'thinness_5_9_years']
+2021-12-31 13:23:58,192 - INFO - load_data.py - 161 - etl_data: INICIO verificación de valores columnas numéricas
+2021-12-31 13:23:58,192 - DEBUG - verify_columns_values.py - 77 - verify_num_column_values: VERIFY NUM COLS, Umbral 579.0 erróneos de total 2891
+2021-12-31 13:23:58,192 - DEBUG - verify_columns_values.py - 82 - verify_num_column_values: VERIFY NUM COLS, regla pct aplicada a columnas ['pct_exp_GDP', 'pct_total_exp', 'Hepatitis_B', 'Polio', 'Diphtheria', 'thinness_5_9_years', 'thinness__1_19_years']
+2021-12-31 13:23:58,193 - DEBUG - verify_columns_values.py - 102 - verify_num_column_values: VERIFY NUM COLS, Columna pct_exp_GDP: 1301 registro(s) erróneo(s)
+2021-12-31 13:23:58,196 - DEBUG - verify_columns_values.py - 82 - verify_num_column_values: VERIFY NUM COLS, regla x1000 aplicada a columnas ['Adult_Mortality', 'infant_deaths', 'Measles', 'under_five_deaths', 'HIV_AIDS']
+2021-12-31 13:23:58,197 - DEBUG - verify_columns_values.py - 102 - verify_num_column_values: VERIFY NUM COLS, Columna infant_deaths: 13 registro(s) erróneo(s)
+2021-12-31 13:23:58,198 - DEBUG - verify_columns_values.py - 102 - verify_num_column_values: VERIFY NUM COLS, Columna Measles: 514 registro(s) erróneo(s)
+2021-12-31 13:23:58,199 - DEBUG - verify_columns_values.py - 82 - verify_num_column_values: VERIFY NUM COLS, regla 0_1 aplicada a columnas ['Income_index']
+2021-12-31 13:23:58,200 - DEBUG - verify_columns_values.py - 124 - verify_num_column_values: VERIFY NUM COLS, Eliminadas por exceso erróneos las columnas: ['pct_exp_GDP']
+2021-12-31 13:23:58,207 - DEBUG - verify_columns_values.py - 134 - verify_num_column_values: VERIFY NUM COLS, Columnas con erróneos inferior umbral, se asignan como nulos:
+2021-12-31 13:23:58,207 - DEBUG - verify_columns_values.py - 135 - verify_num_column_values: ['infant_deaths', 'Measles']
+2021-12-31 13:23:58,207 - INFO - load_data.py - 167 - etl_data: FIN verificación de valores columnas numéricas
+2021-12-31 13:23:58,207 - DEBUG - load_data.py - 174 - etl_data: EDA: se decide tomar como nulos los valores cero para el atributo "Income_index"
+2021-12-31 13:23:58,207 - INFO - load_data.py - 177 - etl_data: ============== FIN ETL_DATA ==============
+2021-12-31 13:23:58,212 - DEBUG - run_training.py - 51 - <module>: TRAIN_TEST_SPLIT: con test size 0.2: 	TRAIN 2312 obsv.	TEST 579 obsv
+2021-12-31 13:23:58,212 - INFO - run_training.py - 58 - <module>: ============== INICIO PREPRX ==============
+2021-12-31 13:23:58,427 - DEBUG - run_training.py - 71 - <module>: PREPROCESADO, Con <power transform> True: 
+2021-12-31 13:23:58,427 - DEBUG - run_training.py - 72 - <module>: Medias: 	TRAIN [5.359035015059146e-16, -2.5244128202657645e-16, 9.776877500591776e-17, 7.654392306455447e-17, -1.7138347642245604e-16, -1.128470634891487e-16, 5.738393228490752e-17, 5.660600784723765e-16, -2.3299317108482957e-16, -2.737141539949564e-16, -2.948429658822864e-17, 1.2129858824408068e-16, 2.0725443660390034e-16, 0.823961937716263];	TEST [0.0531156758451014, -0.018880111228786453, -0.028669352377159056, 0.08124546905009147, -0.10178556050656559, 0.0660507164756593, 0.05153758185177204, -0.09304454132012727, 0.04407756985670886, 0.04321922114005552, -0.009859553632993755, -0.06033821914588047, -0.047536608784644094, 0.8238341968911918]
+2021-12-31 13:23:58,427 - DEBUG - run_training.py - 73 - <module>: Desv. tip.: 	TRAIN [1.0002163331555853, 1.0002163331555853, 1.000216333155587, 1.0002163331555876, 1.0002163331555933, 1.0002163331555904, 1.0002163331555862, 1.0002163331555884, 1.0002163331555864, 1.000216333155585, 1.0002163331555873, 1.0002163331555871, 1.0002163331555864, 0.3809349384991194];	TEST [0.9748854838801867, 0.9558347151661832, 1.042474825004756, 0.9384327727282887, 0.9830398813172606, 0.9838116165784703, 0.9806624271504133, 0.9478777746312846, 0.9727781235028395, 1.0035537745155176, 0.9874744764479406, 1.0014433382131016, 0.9733868834007561, 0.3812905786060533]
+2021-12-31 13:23:58,427 - INFO - run_training.py - 76 - <module>: ============== FIN PREPRX ==============

@@ -1,0 +1,80 @@
+#
+#
+
+# SECC: func. "format_columns"
+
+# Orden de las columnas (facilitar EDA, columnas relacionadas o miama temática, etc.)
+column_list:
+  - 'Country'
+  - 'Year'
+  - 'Status'
+  - 'Population'
+  - 'Income_composition_of_resources'
+  - 'Total_expenditure'
+  - 'percentage_expenditure'
+  - 'GDP'
+  - 'Hepatitis_B'
+  - 'Measles'
+  - 'Polio'
+  - 'Diphtheria'
+  - 'HIV_AIDS'
+  - 'BMI'
+  - 'Alcohol'
+  - 'thinness_5_9_years'
+  - 'thinness__1_19_years'
+  - 'Schooling'
+  - 'under_five_deaths'
+  - 'infant_deaths'
+  - 'Adult_Mortality'
+  - 'Life_expectancy'
+
+column_rename:
+  'Total_expenditure': 'pct_total_exp'
+  'percentage_expenditure': 'pct_exp_GDP'
+  'Income_composition_of_resources': 'Income_index'
+
+column_type:
+  category: ['Country', 'Status']
+
+column_index:
+  - 'Country'
+  - 'Year'
+
+
+# SECC: func. "first_clean"
+
+target_name: 'Life_expectancy'
+var_zero_thresh: 0.5
+except_cols_var:
+  - 'Income_index'
+
+max_null_per_row: 5
+
+
+# SECC: eliminar columnas (EDA: correladas, nº elevado valores erróneos o nulos, etc.
+
+del_columns:
+  - 'Population'
+  - 'Schooling'
+  - 'under_five_deaths'
+  - 'thinness_5_9_years'
+
+
+# SECC: verificar y corregir columnas numéricas según sus reglas establecidas
+
+column_def_rules:
+  pct: ['pct_exp_GDP', 'pct_total_exp', 'Hepatitis_B', 'Polio', 'Diphtheria', 'thinness_5_9_years',
+                         'thinness__1_19_years']
+  x1000: ['Adult_Mortality', 'infant_deaths', 'Measles', 'under_five_deaths', 'HIV_AIDS']
+  0_1: ['Income_index']
+
+del_wrong_thresh_col: True
+
+max_wrong: 0.20
+
+assign_na: True
+
+
+
+
+

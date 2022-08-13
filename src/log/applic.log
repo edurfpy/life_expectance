@@ -1,0 +1,39 @@
+2021-12-30 11:59:08,344 - INFO - run_training.py - <module> - 34: INICIO TRAINING
+2021-12-30 11:59:08,344 - INFO - load_data.py - etl_data - 131: INICIO ETL
+2021-12-30 11:59:08,404 - INFO - load_data.py - etl_data - 170: FIN ETL
+2021-12-30 11:59:08,410 - INFO - run_training.py - <module> - 40: FIN TRAINING
+2021-12-30 12:04:27,051 - INFO - run_training.py - <module> - 34: ====== INICIO TRAINING ======
+2021-12-30 12:04:27,052 - INFO - load_data.py - etl_data - 131: INICIO ETL
+2021-12-30 12:04:27,097 - INFO - load_data.py - etl_data - 170: FIN ETL
+2021-12-30 12:04:27,101 - INFO - run_training.py - <module> - 40: ====== FIN TRAINING ======
+2021-12-30 12:08:06,454 - INFO - run_training.py - <module> - 34: ====== INICIO TRAINING ======
+2021-12-30 12:08:06,454 - INFO - load_data.py - etl_data - 131: INICIO ETL
+2021-12-30 12:08:06,499 - INFO - load_data.py - etl_data - 170: FIN ETL
+2021-12-30 12:08:06,506 - INFO - run_training.py - <module> - 40: ====== FIN TRAINING ======
+2021-12-30 12:09:56,130 - INFO - run_training.py - <module> - 34: ====== INICIO TRAINING ======
+2021-12-30 12:09:56,130 - INFO - load_data.py - etl_data - 131: INICIO ETL
+2021-12-30 12:09:56,175 - INFO - load_data.py - etl_data - 170: FIN ETL
+2021-12-30 12:09:56,179 - INFO - run_training.py - <module> - 40: ====== FIN TRAINING ======
+2021-12-30 12:25:31,782 - INFO - run_training.py - 34 - <module>: ============== INICIO TRAINING ==============
+2021-12-30 12:25:31,782 - INFO - load_data.py - 131 - etl_data: INICIO ETL
+2021-12-30 12:25:31,827 - INFO - load_data.py - 175 - etl_data: FIN ETL
+2021-12-30 12:25:31,832 - INFO - run_training.py - 40 - <module>: ============== FIN TRAINING ==============
+2021-12-30 16:32:50,780 - INFO - run_training.py - 40 - <module>: ============== INICIO TRAINING ==============
+2021-12-30 16:32:50,780 - INFO - load_data.py - 131 - etl_data: INICIO ETL
+2021-12-30 16:32:50,827 - INFO - load_data.py - 175 - etl_data: FIN ETL
+2021-12-30 16:32:50,834 - INFO - run_training.py - 56 - <module>: INICIO PREPROCESADO
+2021-12-30 16:32:51,087 - INFO - run_training.py - 73 - <module>: FIN PREPROCESADO
+2021-12-30 16:32:51,087 - INFO - train.py - 164 - train: INICIO TRAIN MODELS
+2021-12-30 17:02:44,661 - INFO - train.py - 222 - train: FIN TRAIN MODELS
+2021-12-31 13:23:58,141 - INFO - run_training.py - 40 - <module>: ============== INICIO RUN_TRAINING ==============
+2021-12-31 13:23:58,142 - INFO - load_data.py - 131 - etl_data: INICIO ETL
+2021-12-31 13:23:58,207 - INFO - load_data.py - 176 - etl_data: FIN ETL
+2021-12-31 13:23:58,212 - INFO - run_training.py - 56 - <module>: INICIO PREPROCESADO
+2021-12-31 13:23:58,212 - INFO - run_training.py - 57 - <module>: PREPROCESADO con <power transform>: True
+2021-12-31 13:23:58,427 - INFO - run_training.py - 75 - <module>: FIN PREPROCESADO
+2021-12-31 13:23:58,427 - INFO - train.py - 164 - train: INICIO TRAIN MODELS
+2021-12-31 13:23:58,427 - INFO - train.py - 165 - train: MODELS: ['Lasso', 'GBRegressor', 'XGBRegressor']
+2021-12-31 13:53:56,243 - INFO - train.py - 224 - train: Guardados resultados training: <train_results.csv>
+2021-12-31 13:53:56,244 - INFO - train.py - 225 - train: FIN TRAIN MODELS
+2021-12-31 14:06:09,718 - INFO - train.py - 139 - save_models: Guardado(s) 2 mejor(es) modelo(s).
+2021-12-31 14:06:09,718 - INFO - run_training.py - 87 - <module>: ============== FIN RUN_TRAINING ==============

@@ -1,0 +1,29 @@
+2021-12-31 13:23:58,427 - INFO - train.py - 166 - train: ============== INICIO TRAIN MODELS ==============
+2021-12-31 13:23:58,442 - INFO - train.py - 147 - train_baseline_model: **** BASELINE MODEL: LinearRegression(n_jobs=11) ****
+2021-12-31 13:23:58,443 - INFO - train.py - 148 - train_baseline_model: TRAIN, R cuadr: 0.8593456368504427
+2021-12-31 13:23:58,444 - INFO - train.py - 149 - train_baseline_model: TEST, R cuadr: 0.8548731356853491
+2021-12-31 13:23:58,461 - INFO - train.py - 153 - train_baseline_model: Generalización (cross val train), RMSE:
+2021-12-31 13:23:58,461 - INFO - train.py - 154 - train_baseline_model: mean: 3.537547018089839, std: 0.2471708928255066
+2021-12-31 13:23:58,462 - INFO - train.py - 158 - train_baseline_model: RMSE TEST: 3.6247704862983166
+2021-12-31 13:23:58,463 - INFO - train.py - 178 - train: **** INICIO MODELO Lasso ****
+2021-12-31 13:23:58,463 - INFO - train.py - 182 - train: grid params: <alpha>: [1.e-03 1.e-02 1.e-01 1.e+00 1.e+01 1.e+02 1.e+03]; 
+2021-12-31 13:24:00,543 - INFO - train.py - 207 - train: tiempo: 0:00:02.080439
+2021-12-31 13:24:00,543 - INFO - train.py - 208 - train: Best params: {'alpha': 0.01}
+2021-12-31 13:24:00,543 - INFO - train.py - 213 - train: TRAIN neg_root_mean_squared_error: -3.5911125565955655
+2021-12-31 13:24:00,544 - INFO - train.py - 214 - train: TEST neg_root_mean_squared_error: -3.4634965684308505
+2021-12-31 13:24:00,544 - INFO - train.py - 178 - train: **** INICIO MODELO GBRegressor ****
+2021-12-31 13:24:00,544 - INFO - train.py - 182 - train: grid params: <learning_rate>: [0.001 0.01  0.1   1.   ]; <max_depth>: [3, 5, 7, 10]; <subsample>: [0.5, 0.7, 1.0]; <max_features>: [0.5, 'sqrt', None]; 
+2021-12-31 13:28:46,204 - INFO - train.py - 207 - train: tiempo: 0:04:45.659552
+2021-12-31 13:28:46,204 - INFO - train.py - 208 - train: Best params: {'learning_rate': 0.01, 'max_depth': 10, 'max_features': 0.5, 'subsample': 0.7}
+2021-12-31 13:28:46,322 - INFO - train.py - 213 - train: TRAIN neg_root_mean_squared_error: -0.6155042191892656
+2021-12-31 13:28:46,322 - INFO - train.py - 214 - train: TEST neg_root_mean_squared_error: -1.7059249466244089
+2021-12-31 13:28:46,322 - INFO - train.py - 178 - train: **** INICIO MODELO XGBRegressor ****
+2021-12-31 13:28:46,322 - INFO - train.py - 182 - train: grid params: <learning_rate>: [0.001, 0.01, 0.1]; <max_depth>: [5, 7, 10]; <min_child_weight>: [1, 3, 5]; <subsample>: [0.5, 0.7, 1]; <colsample_bytree>: [0.5, 0.7, 1]; 
+2021-12-31 13:53:56,192 - INFO - train.py - 207 - train: tiempo: 0:25:09.869709
+2021-12-31 13:53:56,192 - INFO - train.py - 208 - train: Best params: {'colsample_bytree': 0.7, 'learning_rate': 0.01, 'max_depth': 10, 'min_child_weight': 3, 'subsample': 1}
+2021-12-31 13:53:56,216 - INFO - train.py - 213 - train: TRAIN neg_root_mean_squared_error: -0.7225197034612418
+2021-12-31 13:53:56,216 - INFO - train.py - 214 - train: TEST neg_root_mean_squared_error: -1.743861340020816
+2021-12-31 13:53:56,244 - INFO - train.py - 226 - train: ============== FIN TRAIN MODELS ==============
+2021-12-31 14:06:09,312 - INFO - train.py - 136 - save_models: <BEST> file: GBRegressor_1.pkl
+2021-12-31 14:06:09,718 - INFO - train.py - 136 - save_models:  file: XGBRegressor_2.pkl
+2021-12-31 14:06:09,718 - INFO - train.py - 138 - save_models: Guardado(s) 2 modelo(s).
